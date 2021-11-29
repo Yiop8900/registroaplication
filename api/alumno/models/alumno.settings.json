@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "alumnos",
+  "info": {
+    "name": "alumno",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nombre": {
+      "type": "string"
+    },
+    "apellido": {
+      "type": "string"
+    },
+    "presente": {
+      "type": "boolean"
+    },
+    "carrera": {
+      "via": "alumno",
+      "model": "carrera"
+    },
+    "ramos": {
+      "via": "alumnos",
+      "collection": "ramo",
+      "dominant": true
+    },
+    "usuario": {
+      "model": "usuario"
+    }
+  }
+}

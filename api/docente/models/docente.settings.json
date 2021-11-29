@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "docentes",
+  "info": {
+    "name": "docente",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nombre": {
+      "type": "string"
+    },
+    "apellido": {
+      "type": "string"
+    },
+    "ramos": {
+      "via": "docentes",
+      "collection": "ramo",
+      "dominant": true
+    },
+    "usuario": {
+      "model": "usuario"
+    }
+  }
+}
